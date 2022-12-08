@@ -110,8 +110,6 @@ var uploadVideo = multer({
 });
 
 
-
-
 const storageUpdateVideo = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, "uploads");
@@ -216,13 +214,10 @@ app.use(express.static("./build"));
 //   res.sendfile("./build/index.html");
 // });
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./build/index.html"), function (err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
+app.use("/", (req, res) => {
+  res.send("OK");
 });
+
 
 connectDb();
 
