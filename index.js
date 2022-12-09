@@ -208,7 +208,7 @@ app.post("/addBlog", SiteCourses.addBlog);
 app.use("/defi", defiRoutes);
 
 ///////////////////////////////////////
-app.use(express.static("./build"));
+// app.use(express.static("./build"));
 
 // app.use("*", (req, res) => {
 //   res.sendfile("./build/index.html");
