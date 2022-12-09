@@ -221,9 +221,20 @@ app.use("/", (req, res) => {
 
 connectDb();
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-const PORT = process.env.PORT || 5000;
-server.listen(PORT, function () {
-  console.log("server is listning on port " + PORT);
+// const PORT = process.env.PORT || 5000;
+// server.listen(PORT, function () {
+//   console.log("server is listning on port " + PORT);
+// });
+
+
+app.use("/", (req, res) => {
+  res.send("OK");
+});
+
+
+const PORT = process.env.PORT || 8074;
+app.listen(PORT, function () {
+  console.log("server is started on port " + PORT);
 });
