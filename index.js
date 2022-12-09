@@ -2,7 +2,7 @@ const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const defiRoutes = require("./routes/defi");
+// const defiRoutes = require("./routes/defi");
 
 
 require('fs')
@@ -205,7 +205,7 @@ app.post("/addBlog", SiteCourses.addBlog);
 
 
 // *************************  Aqib Bai Route ****************************
-app.use("/defi", defiRoutes);
+// app.use("/defi", defiRoutes);
 
 ///////////////////////////////////////
 // app.use(express.static("./build"));
